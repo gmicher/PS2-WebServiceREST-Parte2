@@ -1,0 +1,28 @@
+### GET todas as empresas
+GET http://localhost:8080/fci/api/empresas
+
+### GET empresa por id
+GET http://localhost:8080/fci/api/empresas/1
+
+### POST nova empresa
+POST http://localhost:8080/fci/api/empresas
+Content-Type: application/json
+
+{
+  "nome": "Nova Empresa Teste LTDA",
+  "cnpj": "12.345.678/0001-99",
+  "emailContato": "contato@novaempresa.com"
+}
+
+### PUT atualizar empresa
+PUT http://localhost:8080/fci/api/empresas/1
+Content-Type: application/json
+
+{
+  "nome": "Empresa Alfa LTDA Atualizada",
+  "cnpj": "12.345.678/0001-90",
+  "emailContato": "novo.contato@empresa-alfa.com"
+}
+
+### DELETE empresa
+DELETE http://localhost:8080/fci/api/empresas/5
