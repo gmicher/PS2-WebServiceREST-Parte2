@@ -1,0 +1,32 @@
+### GET vagas
+GET http://localhost:8080/fci/api/vagas
+
+### GET vaga por id
+GET http://localhost:8080/fci/api/vagas/1
+
+### POST vaga
+POST http://localhost:8080/fci/api/vagas
+Content-Type: application/json
+
+{
+  "titulo": "QA Tester",
+  "descricao": "Testes manuais e automatizados em aplicações web.",
+  "publicacao": "2025-10-10",
+  "ativo": true,
+  "idEmpresa": 3
+}
+
+### PUT vaga
+PUT http://localhost:8080/fci/api/vagas/1
+Content-Type: application/json
+
+{
+  "titulo": "Desenvolvedor Java Sênior",
+  "descricao": "Atuação em projetos backend com Java, Spring e APIs REST.",
+  "publicacao": "2025-10-01",
+  "ativo": true,
+  "idEmpresa": 1
+}
+
+### DELETE vaga
+DELETE http://localhost:8080/fci/api/vagas/7

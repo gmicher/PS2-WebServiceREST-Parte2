@@ -1,0 +1,30 @@
+### GET estudantes
+GET http://localhost:8080/fci/api/estudantes
+
+### GET estudante por id
+GET http://localhost:8080/fci/api/estudantes/1
+
+### POST estudante
+POST http://localhost:8080/fci/api/estudantes
+Content-Type: application/json
+
+{
+  "nome": "Novo Estudante",
+  "email": "novo.estudante@email.com",
+  "nascimento": "2004-01-20",
+  "anoIngresso": 2024
+}
+
+### PUT estudante
+PUT http://localhost:8080/fci/api/estudantes/1
+Content-Type: application/json
+
+{
+  "nome": "Ana Paula Souza Atualizada",
+  "email": "ana.atualizada@email.com",
+  "nascimento": "2002-03-15",
+  "anoIngresso": 2020
+}
+
+### DELETE estudante
+DELETE http://localhost:8080/fci/api/estudantes/10
