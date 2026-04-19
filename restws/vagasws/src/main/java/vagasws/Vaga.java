@@ -1,7 +1,15 @@
 package vagasws;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "vagas")
 public class Vaga {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String titulo;
     private String descricao;
     private String publicacao;
@@ -9,15 +17,6 @@ public class Vaga {
     private long idEmpresa;
 
     public Vaga() {
-    }
-
-    public Vaga(long id, String titulo, String descricao, String publicacao, boolean ativo, long idEmpresa) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.publicacao = publicacao;
-        this.ativo = ativo;
-        this.idEmpresa = idEmpresa;
     }
 
     public Vaga(String titulo, String descricao, String publicacao, boolean ativo, long idEmpresa) {

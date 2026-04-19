@@ -1,19 +1,20 @@
 package vagasws;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "empresas")
 public class Empresa {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nome;
     private String cnpj;
     private String emailContato;
 
     public Empresa() {
-    }
-
-    public Empresa(long id, String nome, String cnpj, String emailContato) {
-        this.id = id;
-        this.nome = nome;
-        this.cnpj = cnpj;
-        this.emailContato = emailContato;
     }
 
     public Empresa(String nome, String cnpj, String emailContato) {
